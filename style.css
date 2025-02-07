@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'ds-digitalnormal';
+    src: 
+        url('ds-digital-webfont.woff2') format('woff2'),
+        url('ds-digital-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -38,6 +47,7 @@ body {
     height: 30px;
     background: rgb(216, 216, 216);
     color: black;
+    font-family: 'ds-digitalnormal';
     font-size: 2rem;
     text-align: right;
     padding: 10px;
