@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    background-image: url("https://www.newegg.com/insider/wp-content/uploads/windows_xp_bliss-wide.jpg"); 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0px; 
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #092491;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    width: 250px;
+    height: 420px;
+}
+
+.display {
+    grid-column: span 4;
+    height: 30px;
+    background: rgb(216, 216, 216);
+    color: black;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: inset 10px 10px 10px rgba(7, 0, 0, 0.293);
+}
+
+button {
+    height: 60px;
+    font-size: 1.2rem;
+    font-weight: 100;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    background: whitesmoke;
+    color: #0b2bac;
+    transition: 0.1s;
+}
+
+.operator {
+    background: rgb(194, 0, 0);
+    color: whitesmoke;
+}
+
+.equal {
+    grid-column: span 2;
+    background: rgb(194, 0, 0);
+    color: whitesmoke;
+}
+
+.clear {
+    grid-column: span 2;
+    pointer-events: none;
+    background: rgb(19, 0, 0);
+    color: whitesmoke;
+}
