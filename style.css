@@ -64,7 +64,6 @@ button {
     font-size: 1.2rem;
     font-weight: 100;
     text-align: left;
-    vertical-align:text-top;
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
@@ -79,8 +78,14 @@ button {
     text-align: center;
 }
 
-.equal {
+.equals {
     grid-column: span 2;
+    background: rgb(194, 0, 0);
+    color: whitesmoke;
+    text-align: center;
+}
+
+.clear {
     background: rgb(194, 0, 0);
     color: whitesmoke;
     text-align: center;
