@@ -1,26 +1,29 @@
-const add = (a,b) => a+b;
-const subtract = (a,b) => a-b;
-const multiply = (a,b) => a*b;
-const divide = (a,b) => a/b;
+// OPERATOR FUNCTIONS
+const add = (a,b) => a + b;
+const subtract = (a,b) => a - b;
+const multiply = (a,b) => a * b;
+const divide = (a,b) => (b === 0 ? "8008" : a / b);
 
-let numberOne = document.querySelector(".number");
-let numberTwo = document.querySelector(".number");
-let operator = document.querySelector(".operator");
+// OPERATION VARIABLES
+let num1 = document.querySelectorAll(".number");
+let num2 = document.querySelectorAll(".number");
+let operator = document.querySelectorAll(".operator");
+let equals = document.querySelector(".equals");
+let decimal = document.querySelector(".decimal");
 
-const addButton = document.querySelector("#add");
-addButton.addEventListener("click",add);
+let clearDisplay = document.querySelector(".clear");
+let display = "";
 
-const subtractButton = document.querySelector("#subtract");
-subtractButton.addEventListener("click",subtract);
+// SWITCH CASE FUNCTION -- POLYMORPHISM
+const evaluate = (num1,num2,operator) => {
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
 
-const multiplyButton = document.querySelector("#add");
-multiplyButton.addEventListener("click",multiply);
+    if (operator === "+") return add(num1,num2);
+    if (operator === "-") return subtract(num1,num2);
+    if (operator === "x") return multiply(num1,num2);
+    if (operator === "÷") return divide(num1,num2);
+};
 
-const divideButton = document.querySelector("#add");
-divideButton.addEventListener("click",divide);
+// EVENT HANDLER DELEGATION
 
-const equalsButton = document.querySelector(".equals");
-// equalsButton.addEventListener("click",());
-
-const clearButton = document.querySelector(".clear");
-// clearButton.addEventListener("click",());

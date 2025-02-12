@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0px; 
+    gap: 20px; 
 }
 
 .title {
@@ -61,15 +61,20 @@ body {
 
 button {
     height: 60px;
-    font-size: 1.2rem;
-    font-weight: 100;
-    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 80;
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     background: whitesmoke;
     color: #0b2bac;
     transition: 0.1s;
+}
+
+.number {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;   
 }
 
 .operator {
@@ -89,6 +94,11 @@ button {
     background: rgb(194, 0, 0);
     color: whitesmoke;
     text-align: center;
+    font-size: 1.2rem;
+}
+
+#decimal {
+    font-size: 2rem; 
 }
 
 .solar {
@@ -96,4 +106,16 @@ button {
     pointer-events: none;
     background: rgb(19, 0, 0);
     color: whitesmoke;
+}
+
+#divide {
+    font-size: 1.8rem;
+}
+
+#multiply {
+    font-size: 1.3rem;
+}
+
+#subtract {
+    font-size: 2.2rem;
 }
