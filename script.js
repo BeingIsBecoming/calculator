@@ -1,29 +1,44 @@
-// OPERATOR FUNCTIONS
-const add = (a,b) => a + b;
-const subtract = (a,b) => a - b;
-const multiply = (a,b) => a * b;
-const divide = (a,b) => (b === 0 ? "8008" : a / b);
 
-// OPERATION VARIABLES
-let num1 = document.querySelectorAll(".number");
-let num2 = document.querySelectorAll(".number");
-let operator = document.querySelectorAll(".operator");
-let equals = document.querySelector(".equals");
-let decimal = document.querySelector(".decimal");
+// DOM REFERENCES
+const display = document.querySelector(".display");
+const numberButtons = document.querySelectorAll(".number");
+const operatorButtons = document.querySelectorAll(".operator");
+const equalsButton = document.querySelector(".equals");
+const clearButton = document.querySelector(".clear");
+const decimalButton = document.querySelector(".decimal");
 
-let clearDisplay = document.querySelector(".clear");
-let display = "";
+// EVALUATION VARIABLES
+let a = "";
+let b = "";
+let operator = "";
+let displayText = "";
 
-// SWITCH CASE FUNCTION -- POLYMORPHISM
-const evaluate = (num1,num2,operator) => {
-    num1 = parseFloat(num1);
-    num2 = parseFloat(num2);
+// EVALUATION FUNCTION
+const evaluate = (a, b, operator) => {
+    a = parseFloat(a);
+    b = parseFloat(b);
 
-    if (operator === "+") return add(num1,num2);
-    if (operator === "-") return subtract(num1,num2);
-    if (operator === "x") return multiply(num1,num2);
-    if (operator === "÷") return divide(num1,num2);
+    return  operator === "+" ? a + b :
+            operator === "-" ? a - b :
+            operator === "x" ? a * b :
+            operator === "÷" ? (b === 0 ? "8008" : a / b):
+            undefined;
 };
 
-// EVENT HANDLER DELEGATION
+// EVENT DELEGATION
 
+// NUMBERS
+numberButtons.forEach(button => {
+    button.addEventListener("click", function(){
+        let number = this.textContent;
+        display.textContent += number;
+    });
+});
+
+// CLEAR 
+clearButton.addEventListener("click", function() {
+    a = "";
+    b = "";
+    operator = "";
+    display.textContent = "";
+});
