@@ -42,7 +42,7 @@ numberButtons.forEach(button => {
 operatorButtons.forEach(button => {
     button.addEventListener("click", function() {
         operator = this.textContent;
-        display.textContent = operator;
+        // display.textContent = operator;
     });
 });
 
