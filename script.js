@@ -30,8 +30,10 @@ numberButtons.forEach(button => {
         display.textContent += number;
         if (operator === ""){
             a += number;
+            display.textContent = a;
         } else {
             b += number;
+            display.textContent = b;
         }
     });
 });
@@ -49,13 +51,13 @@ clearButton.addEventListener("click", function() {
     a = "";
     b = "";
     operator = "";
-    display.textContent = "0";
+    display.textContent = "";
 });
 
 // EQUALS OPERATION 
 equalsButton.addEventListener("click", function() {
     display.textContent = evaluate(a, b, operator);
-    a = "";
+    a = display.textContent;
     b = "";
     operator = "";
 });
