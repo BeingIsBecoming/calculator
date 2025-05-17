@@ -1,7 +1,7 @@
-# calculator
+# Calculator
 JavaScript Calculator 2025
 
-## Screenshots
+## Screenshot
 ![alt text](<Preview.png>)
 
 ## Live Preview
